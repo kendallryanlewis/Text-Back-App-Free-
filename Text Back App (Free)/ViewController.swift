@@ -18,11 +18,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var leadingC: NSLayoutConstraint!//constraint for left side of view
     @IBOutlet weak var trailingC: NSLayoutConstraint! //constraint for right side of view
     
+    @IBOutlet weak var mainBackgroundView: UIView!
     var hamburgerMenusIsVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         enterNewMessage.layer.shadowOffset = CGSize(width:0, height:4)
+        enterNewMessage.layer.shadowRadius = 4
+        enterNewMessage.layer.shadowOpacity = 0.4
+        self.overlay.isHidden = true //Hide overlay on setup
+        
         enterNewMessage.layer.shadowRadius = 4
         enterNewMessage.layer.shadowOpacity = 0.4
         self.overlay.isHidden = true //Hide overlay on setup

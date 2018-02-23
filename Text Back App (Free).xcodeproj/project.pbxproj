@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C7BFA19203D42CD00E6BCCF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7BFA18203D42CC00E6BCCF /* MessageUI.framework */; };
 		D6C35FCE202D58A100E97652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C35FCD202D58A100E97652 /* AppDelegate.swift */; };
 		D6C35FD0202D58A100E97652 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C35FCF202D58A100E97652 /* ViewController.swift */; };
 		D6C35FD3202D58A100E97652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C35FD1202D58A100E97652 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C7BFA18203D42CC00E6BCCF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D6C35FCA202D58A100E97652 /* Text Back App (Free).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Back App (Free).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C35FCD202D58A100E97652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6C35FCF202D58A100E97652 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7BFA19203D42CD00E6BCCF /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C7BFA17203D42CB00E6BCCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BFA18203D42CC00E6BCCF /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D6C35FC1202D58A100E97652 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +92,7 @@
 				D6C35FE1202D58A200E97652 /* Text Back App (Free)Tests */,
 				D6C35FEC202D58A200E97652 /* Text Back App (Free)UITests */,
 				D6C35FCB202D58A100E97652 /* Products */,
+				5C7BFA17203D42CB00E6BCCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

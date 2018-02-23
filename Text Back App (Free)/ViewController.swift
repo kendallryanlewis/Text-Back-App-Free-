@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var enterNewMessage: UITextField! //Enter message text field
     @IBOutlet weak var company: UILabel! //comapny label
@@ -17,9 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var ubeView: UIView! //holds main view for user
     @IBOutlet weak var leadingC: NSLayoutConstraint!//constraint for left side of view
     @IBOutlet weak var trailingC: NSLayoutConstraint! //constraint for right side of view
-    
     @IBOutlet weak var mainBackgroundView: UIView!
+    @IBOutlet weak var homeButton: UIButton!
+    
     var hamburgerMenusIsVisible = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,30 +29,14 @@ class ViewController: UIViewController {
         enterNewMessage.layer.shadowRadius = 4
         enterNewMessage.layer.shadowOpacity = 0.4
         self.overlay.isHidden = true //Hide overlay on setup
-        
         enterNewMessage.layer.shadowRadius = 4
         enterNewMessage.layer.shadowOpacity = 0.4
         self.overlay.isHidden = true //Hide overlay on setup
-    }
-    
-    /******************************** Startup functions *****************************************/
-
-    func insertNewMessage(){
-        let updatedMessage = enterNewMessage.text
-        self.enterNewMessage.textColor = UIColor.lightGray //change company text color to gray
-        enterNewMessage.text = ""//displays new message
-        viewNewMessage.text = updatedMessage //displays new message
-        
-        //enterNewMessage.attributedPlaceholder = NSAttributedString(string:updatedMessage!, attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray]) //Changes the placeholder text
+        self.enterNewMessage.delegate = self
     }
 
-    /*override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-     }*/
     
-    
-    /******************************** Buttons/Switch functions *****************************************/
+    /******** Buttons/Switch functions ***********/
     @IBAction func activeSwitch(_ sender: UISwitch) {
         if (sender.isOn == true){
             self.company.textColor = UIColor.black //change company text color to black
@@ -61,8 +47,10 @@ class ViewController: UIViewController {
             self.company.textColor = UIColor.white //change company text color to white
         }
     }
+    
     @IBAction func newMessageButton(_ sender: Any) {
         insertNewMessage() //Run insertNewMessage function
+        enterNewMessage.resignFirstResponder()//Hides keyboard
     }
     
     @IBAction func hamburgerBtnTapped(_ sender: Any) {//hamburger menu button
@@ -81,4 +69,29 @@ class ViewController: UIViewController {
             print("The animation is complete!")// verify manu is called and displayed
         }
     }
+    
+    func insertNewMessage(){
+        if (enterNewMessage.text != ""){ //Check if text field is empty
+            let updatedMessage = enterNewMessage.text
+            self.enterNewMessage.textColor = UIColor.black //change company text color to gray
+            enterNewMessage.text = ""//displays new message
+            viewNewMessage.text = updatedMessage //displays new message
+        }
+        //enterNewMessage.attributedPlaceholder = NSAttributedString(string:updatedMessage!, attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray]) //Changes the placeholder text
+    }
+    
+    
+    //Hide keyboard when the users touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
+    //presses the return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        enterNewMessage.resignFirstResponder()//hides keyboard
+        insertNewMessage() //Run insertNewMessage function
+        return(true)
+    }
+
 }
+

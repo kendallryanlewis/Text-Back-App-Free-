@@ -16,9 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        //hex color finder www.ralfebert.de/ios-examples/uikit/swift-uicolor-picker
+        
+        //How to set navigation background color in AppDelegate
+        UINavigationBar.appearance().barTintColor = UIColor(hue: 0.6, saturation: 0.32, brightness: 0.29, alpha: 1.0) /* #323b49 */
+        //How to set navigation bar title text color in AppDelegate
+        UINavigationBar.appearance().tintColor = UIColor.white
+        //How to set navigation bar title text color in AppDelegate
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        
+        
+        
         return true
     }
-
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

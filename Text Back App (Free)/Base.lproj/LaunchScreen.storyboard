@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,12 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BAC wallpaper-2" translatesAutoresizingMaskIntoConstraints="NO" id="pmt-Wz-JZ6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="papers.co-mt42-starry-night-sky-star-galaxy-space-white-grey-41-iphone-wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="pmt-Wz-JZ6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pmt-Wz-JZ6" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="aIx-nC-Zkb"/>
+                            <constraint firstItem="pmt-Wz-JZ6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iSU-bF-3Ko"/>
+                            <constraint firstItem="pmt-Wz-JZ6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pGL-tV-nI4"/>
+                            <constraint firstItem="pmt-Wz-JZ6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="x8o-2P-ONZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BAC wallpaper-2" width="1242" height="2208"/>
+        <image name="papers.co-mt42-starry-night-sky-star-galaxy-space-white-grey-41-iphone-wallpaper" width="1125" height="2436"/>
     </resources>
 </document>

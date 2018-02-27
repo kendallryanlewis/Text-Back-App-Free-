@@ -18,11 +18,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var leadingC: NSLayoutConstraint!//constraint for left side of view
     @IBOutlet weak var trailingC: NSLayoutConstraint! //constraint for right side of view
     @IBOutlet weak var mainBackgroundView: UIView!
-    @IBOutlet weak var homeButton: UIButton!
     
-    var hamburgerMenusIsVisible = false
+    /******** variables ***********/
+    var hamburgerMenusIsVisible = false//sets menu to close
+
+
     
-    
+    /******** Buttons/Switch functions ***********/
     override func viewDidLoad() {
         super.viewDidLoad()
         enterNewMessage.layer.shadowOffset = CGSize(width:0, height:4)
@@ -74,12 +76,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if (enterNewMessage.text != ""){ //Check if text field is empty
             let updatedMessage = enterNewMessage.text
             self.enterNewMessage.textColor = UIColor.black //change company text color to gray
-            enterNewMessage.text = ""//displays new message
+            enterNewMessage.text = ""//dclears text field
             viewNewMessage.text = updatedMessage //displays new message
+            userMessages.append(updatedMessage!)
+            //userMessages[messageIndex] = updatedMessage!
         }
         //enterNewMessage.attributedPlaceholder = NSAttributedString(string:updatedMessage!, attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray]) //Changes the placeholder text
     }
-    
     
     //Hide keyboard when the users touches outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -92,6 +95,5 @@ class ViewController: UIViewController, UITextFieldDelegate {
         insertNewMessage() //Run insertNewMessage function
         return(true)
     }
-
 }
 

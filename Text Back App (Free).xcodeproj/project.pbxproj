@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5C7BFA19203D42CD00E6BCCF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7BFA18203D42CC00E6BCCF /* MessageUI.framework */; };
+		5C8C87D92043B56C006C5640 /* recentMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C87D82043B56C006C5640 /* recentMessageViewController.swift */; };
+		5C8C87DB20451CDC006C5640 /* helpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C87DA20451CDC006C5640 /* helpViewController.swift */; };
 		D6C35FCE202D58A100E97652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C35FCD202D58A100E97652 /* AppDelegate.swift */; };
 		D6C35FD0202D58A100E97652 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C35FCF202D58A100E97652 /* ViewController.swift */; };
 		D6C35FD3202D58A100E97652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C35FD1202D58A100E97652 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		5C7BFA18203D42CC00E6BCCF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		5C8C87D82043B56C006C5640 /* recentMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recentMessageViewController.swift; sourceTree = "<group>"; };
+		5C8C87DA20451CDC006C5640 /* helpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpViewController.swift; sourceTree = "<group>"; };
 		D6C35FCA202D58A100E97652 /* Text Back App (Free).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Back App (Free).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C35FCD202D58A100E97652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6C35FCF202D58A100E97652 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +115,9 @@
 			children = (
 				D6C35FCD202D58A100E97652 /* AppDelegate.swift */,
 				D6C35FCF202D58A100E97652 /* ViewController.swift */,
+				5C8C87D82043B56C006C5640 /* recentMessageViewController.swift */,
 				D6C35FD1202D58A100E97652 /* Main.storyboard */,
+				5C8C87DA20451CDC006C5640 /* helpViewController.swift */,
 				D6C35FD4202D58A100E97652 /* Assets.xcassets */,
 				D6C35FD6202D58A100E97652 /* LaunchScreen.storyboard */,
 				D6C35FD9202D58A100E97652 /* Info.plist */,
@@ -273,6 +279,8 @@
 			files = (
 				D6C35FD0202D58A100E97652 /* ViewController.swift in Sources */,
 				D6C35FCE202D58A100E97652 /* AppDelegate.swift in Sources */,
+				5C8C87D92043B56C006C5640 /* recentMessageViewController.swift in Sources */,
+				5C8C87DB20451CDC006C5640 /* helpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
